@@ -1,4 +1,3 @@
-nosave string ggwp_deathmessage = "\cjTHE REAPER GOT YOU";
 nosave int ggwp_deathmessagedelay = 4;
 nosave int ggwp_deathsubtitledelay = 2;
 nosave float ggwp_volume = 1.50;
