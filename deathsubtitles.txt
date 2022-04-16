@@ -1,0 +1,9 @@
+\cfDon't worry. You tried your best.
+\cfIt's fine. You'll do better next time.
+\cfOof. Take a break if you need to.
+\cfYikes. That must've hurt.
+\cfDon't forget to drink some water!
+\cfDamn. You can do this.
+\cfOof. That was rough...
+\cfJeez. Hope you saved recently...
+\cfYou can do this. I believe in you.
