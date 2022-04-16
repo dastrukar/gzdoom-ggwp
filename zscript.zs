@@ -19,12 +19,14 @@ class GGWPDeathMessageHandler : StaticEventHandler
 
 	override void OnRegister()
 	{
+		Array<string> messages;
+		Array<string> subtitles;
 		int lump = -1;
 		while (-1 != (lump = Wads.FindLump("deathmessages", lump + 1)))
 		{
 			string s = Wads.ReadLump(lump);
 			s.Replace("\r\n", "\n");
-			s.Split(_DeathMessages, "\n");
+			s.Split(messages, "\n");
 		}
 
 		lump = -1;
@@ -32,8 +34,12 @@ class GGWPDeathMessageHandler : StaticEventHandler
 		{
 			string s = Wads.ReadLump(lump);
 			s.Replace("\r\n", "\n");
-			s.Split(_DeathSubtitles, "\n");
+			s.Split(subtitles, "\n");
 		}
+
+		// Remove blanks
+		for (int i = 0; i < messages.Size(); i++) if (messages[i] != "") _DeathMessages.Push(messages[i]);
+		for (int i = 0; i < subtitles.Size(); i++) if (subtitles[i] != "") _DeathSubtitles.Push(subtitles[i]);
 	}
 
 	override void WorldTick()
